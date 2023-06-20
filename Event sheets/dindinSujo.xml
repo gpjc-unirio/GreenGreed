@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>dindinSujo</name>
+    <events>
+        <event-block sid="626698999851670">
+            <conditions>
+                <condition id="-18" name="On created" sid="423264585679175" type="dinDinSujo" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="449947349430618" type="dinDinSujo">
+                    <param id="0" name="Vector Y">-500</param>
+                </action>
+                <action id="-16" name="Wait" sid="438766473498122" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="876026744265786" type="dinDinSujo">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="505276507116370" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="138039338535245" type="dinDinSujo" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

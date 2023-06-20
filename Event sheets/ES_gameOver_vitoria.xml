@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_gameOver_vitoria</name>
+    <events>
+        <include>global</include>
+        <event-block sid="426410042271941">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="953951702688657" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="216365202693304" type="Audio">
+                    <param id="0" name="Audio file">gameOver_vitoria</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;gameOver_vitoria&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="877725213646424" type="enter_gamerOver_vitoria">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">1000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="433606462279863">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="116211475433298" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="186906769603588">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="114582411650919" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mobile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="808495484583040" type="enter_gamerOver_vitoria">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="113316536911830">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="115762969750557" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="14" name="On tap" sid="317632966540784" type="touchNarrativa" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="448875727019044" type="System">
+                    <param id="0" name="Layout">splashScreen</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

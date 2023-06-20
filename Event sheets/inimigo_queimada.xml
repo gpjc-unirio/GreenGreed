@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>inimigo_queimada</name>
+    <events>
+        <include>global</include>
+        <event-block sid="324659685972044">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="786793496923573" type="inimigo_queimada">
+                    <param id="0" name="Side">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="379812316385465" type="inimigo_queimada">
+                    <param id="0" name="Instance variable">ipParaDireita_queimada</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="820843463228135">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="214752678260333" type="inimigo_queimada">
+                    <param id="0" name="Side">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="237516874061464" type="inimigo_queimada">
+                    <param id="0" name="Instance variable">ipParaDireita_queimada</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="364115716132765">
+            <conditions>
+                <condition id="-18" name="On created" sid="426591076647082" type="inimigo_queimada" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="538993643594915">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="671075961965942" type="inimigo_queimada">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="659564384714264" type="inimigo_queimada">
+                            <param id="0" name="Instance variable">ipParaDireita_queimada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="441994512673672">
+            <conditions>
+                <condition id="-11" name="For Each" sid="694657773689792" type="System">
+                    <param id="0" name="Object">inimigo_queimada</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="554047575568383">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="937472283588196" type="inimigo_queimada">
+                            <param id="0" name="Instance variable">ipParaDireita_queimada</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="349338997076006" type="inimigo_queimada">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="700837548599643" type="inimigo_queimada">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="447987121235319">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="161710286389125" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="865323633658270" type="inimigo_queimada">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="731158056306558" type="inimigo_queimada">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="623788892641276">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="223496654104242" type="inimigo_queimada">
+                    <param id="0" name="Instance variable">vida_queimada</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="743887719472846" type="inimigo_queimada">
+                    <param id="0" name="Object">particulaQueimada</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="265974093545716" type="inimigo_queimada">
+                    <param id="0" name="Object">dinDinSujo</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="859241499610400" type="player">
+                    <param id="0" name="Instance variable">mortes</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="441521034596023" type="Audio">
+                    <param id="0" name="Audio file">morte_queimada</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="182891396494656" type="inimigo_queimada" />
+            </actions>
+        </event-block>
+        <event-block sid="925185469105338">
+            <conditions>
+                <condition id="-18" name="On created" sid="678942078054180" type="inimigo_queimada" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="949212782645447">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="397329110702207" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mobile&quot;</param>
+                        </condition>
+                        <condition id="-20" name="Is on mobile device" sid="741095380727008" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="406605516978073" type="inimigo_queimada">
+                            <param id="0" name="Instance variable">vida_queimada</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

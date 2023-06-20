@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">fase1</layout>
+        <event-sheet active="1" order="1">casaInimigoObj</event-sheet>
+        <event-sheet order="2">inimigo_motoserra</event-sheet>
+        <event-sheet order="3">inimigo_correntao</event-sheet>
+        <event-sheet order="4">inimigo_queimada</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/player/" />
+        <folder expanded="1" path="animation-folder/blocoSolido/" />
+        <folder expanded="1" path="animation-folder/fundo/" />
+        <folder expanded="1" path="animation-folder/tiro/" />
+        <folder expanded="1" path="animation-folder/plataforma/" />
+        <folder expanded="1" path="animation-folder/agua/" />
+        <folder expanded="1" path="animation-folder/inimigo_queimada/" />
+        <folder expanded="1" path="animation-folder/casaInimigoObj/" />
+        <folder expanded="1" path="animation-folder/motoserra/" />
+        <folder expanded="1" path="animation-folder/inimigo_correntao/" />
+        <folder expanded="1" path="animation-folder/colisor_patrulheiroCorrentao/" />
+        <folder expanded="1" path="animation-folder/map/" />
+        <folder expanded="1" path="animation-folder/barraVida/" />
+        <folder expanded="1" path="animation-folder/barraMoral/" />
+        <folder expanded="1" path="animation-folder/dinDinSujo/" />
+        <folder expanded="1" path="animation-folder/chave/" />
+        <folder expanded="1" path="animation-folder/hudChaves/" />
+        <folder expanded="1" path="animation-folder/portal/" />
+        <folder expanded="1" path="animation-folder/ampulheta/" />
+        <folder expanded="1" path="animation-folder/enter/" />
+        <folder expanded="1" path="animation-folder/fundo_gameOver_derrota/" />
+        <folder expanded="1" path="animation-folder/enter_gamerOver_derrota/" />
+        <folder expanded="1" path="animation-folder/fundo_gameOver_vitoria/" />
+        <folder expanded="1" path="animation-folder/enter_gamerOver_vitoria/" />
+        <folder expanded="1" path="animation-folder/splashScreen/" />
+        <folder expanded="1" path="animation-folder/fundoNarrativa/" />
+        <folder expanded="1" path="animation-folder/heroNarrativa/" />
+        <folder expanded="1" path="animation-folder/caixaTxtNarrativa/" />
+        <folder expanded="1" path="animation-folder/enterNarrativa/" />
+        <folder expanded="1" path="animation-folder/planeta_narrativa/" />
+        <folder expanded="1" path="animation-folder/img1Inconf/" />
+        <folder expanded="1" path="animation-folder/img2Inconf/" />
+        <folder expanded="1" path="animation-folder/img3Inconf/" />
+        <folder expanded="1" path="animation-folder/img4Inconf/" />
+        <folder expanded="1" path="animation-folder/fundo_comoJogar/" />
+        <folder expanded="1" path="animation-folder/enter_comoJogar/" />
+        <folder expanded="1" path="animation-folder/shot/" />
+        <folder expanded="1" path="animation-folder/up/" />
+        <folder expanded="1" path="animation-folder/leftBtn/" />
+        <folder expanded="1" path="animation-folder/rightBtn/" />
+        <folder expanded="1" path="animation-folder/shot2/" />
+        <folder expanded="1" path="animation-folder/tailandia/" />
+        <folder expanded="1" path="animation-folder/congo/" />
+        <folder expanded="1" path="animation-folder/brasil/" />
+    </folders-expanded>
+</c2uistate>

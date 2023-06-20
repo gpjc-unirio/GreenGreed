@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>player</name>
+    <events>
+        <event-block sid="561506047128505">
+            <conditions>
+                <condition id="0" name="On function" sid="368072570311026" type="function">
+                    <param id="0" name="Name">&quot;tomarDano&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="791464103490326" type="player">
+                    <param id="0" name="Instance variable">danoHabilitado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="272515326016096" type="player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">2</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="629050190486305" type="player">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="117681025505834" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="975216032255586" type="player">
+                    <param id="0" name="Instance variable">danoHabilitado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="809492513052793">
+            <conditions>
+                <condition id="0" name="On function" sid="153755576712786" type="function">
+                    <param id="0" name="Name">&quot;tomarDanoMoral&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="419308848668238" type="player">
+                    <param id="0" name="Instance variable">danoMoralHabilitado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="136545394399489" type="player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">2</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="105068940422098" type="player">
+                    <param id="0" name="Instance variable">moral</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="517211783461422" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="751158384255120" type="player">
+                    <param id="0" name="Instance variable">danoMoralHabilitado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815555477416761">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="340505183572416" type="player">
+                    <param id="0" name="Object">inimigo_queimada</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="281060144541455">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="594273566463536" type="player">
+                            <param id="0" name="Instance variable">danoHabilitado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="627431113645766" type="function">
+                            <param id="0" name="Name">&quot;tomarDano&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="159386461112330">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="358601528817642" type="player">
+                    <param id="0" name="Object">motoserra</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="682293266045762">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="474656485922251" type="player">
+                            <param id="0" name="Instance variable">danoHabilitado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="349219635167402" type="function">
+                            <param id="0" name="Name">&quot;tomarDano&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="131824275422670">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="195424737075532" type="player">
+                    <param id="0" name="Object">inimigo_correntao</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="423147487401635">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="386581121087650" type="player">
+                            <param id="0" name="Instance variable">danoHabilitado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="365806386445301" type="function">
+                            <param id="0" name="Name">&quot;tomarDano&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="367878975552453">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="638880297181511" type="player">
+                    <param id="0" name="Object">casaInimigoObj</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="278319458798128">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="177028734219793" type="player">
+                            <param id="0" name="Instance variable">danoHabilitado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="735531487279036" type="function">
+                            <param id="0" name="Name">&quot;tomarDano&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="868515156348157">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="648640434897093" type="player">
+                    <param id="0" name="Object">dinDinSujo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="597764864448826" type="dinDinSujo" />
+            </actions>
+            <sub-events>
+                <event-block sid="152604450600858">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="242869209327258" type="player">
+                            <param id="0" name="Instance variable">danoMoralHabilitado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="823162414185918" type="function">
+                            <param id="0" name="Name">&quot;tomarDanoMoral&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="423321359412320">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="855559269401712" type="dinDinSujo">
+                                    <param id="0" name="Instance variable">sfxDinDinSujo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="505233737820389" type="Audio">
+                                    <param id="0" name="Audio file">dinDinSujo</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="234479619194462" type="dinDinSujo">
+                                    <param id="0" name="Instance variable">sfxDinDinSujo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="814853661115975">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="235537548728079" type="player">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="650314927895888" type="player">
+                    <param id="0" name="Object">particulaPlayer</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="561847670646450" type="Audio">
+                    <param id="0" name="Audio file">morte_player</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="361667526555713" type="player" />
+                <action id="-16" name="Wait" sid="863552271889550" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="333492180996525" type="System">
+                    <param id="0" name="Layout">gameOver_derrota</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="677517914941323">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="751774230451715" type="player">
+                    <param id="0" name="Instance variable">moral</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="594100094722196" type="player">
+                    <param id="0" name="Object">particulaPlayer</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="958752830932856" type="Audio">
+                    <param id="0" name="Audio file">morte_player</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="467866020447228" type="player" />
+                <action id="-16" name="Wait" sid="253447571112906" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="981649171070841" type="System">
+                    <param id="0" name="Layout">gameOver_derrota</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="194992900907552">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="818509370312723" type="player">
+                    <param id="0" name="Instance variable">mortes</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="763235789593769" type="player">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="224017182636548" type="player">
+                    <param id="0" name="Instance variable">mortes</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="147829599033264">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="913287865755504" type="player">
+                    <param id="0" name="Object">chave</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="492753026230488" type="player">
+                    <param id="0" name="Instance variable">moral</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="296587470510268" type="player">
+                    <param id="0" name="Instance variable">chaves</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="166821256686662" type="Audio">
+                    <param id="0" name="Audio file">chave</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="332613142532138" type="chave" />
+            </actions>
+        </event-block>
+        <comment>cronometro</comment>
+        <event-block sid="601051579072579">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="169070734801420" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="909888277674276" type="player">
+                    <param id="0" name="Instance variable">tempo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="736922018984252">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="989603749950311" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="377855032249965" type="hudTempo">
+                    <param id="0" name="Text">player.tempo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908151184900758">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="427249501790167" type="player">
+                    <param id="0" name="Instance variable">tempo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="977876323958378" type="fundo">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">10</param>
+                </action>
+                <action id="4" name="Set font color" sid="583061165408836" type="hudTempo">
+                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="642154039476391">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="107876973228599" type="player">
+                    <param id="0" name="Instance variable">tempo</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="531567259989183" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="273289206880398" type="System">
+                    <param id="0" name="Layout">gameOver_derrota</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

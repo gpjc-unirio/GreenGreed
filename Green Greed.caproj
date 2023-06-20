@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Green Greed</name>
+    <description></description>
+    <version>0.0.1</version>
+    <author>Vinicius Santos de Abreu</author>
+    <author-email>tadeu.classe@uniriotec.br</author-email>
+    <author-website>https://joccom.uniriotec.br/games/gg</author-website>
+    <app-id>gg.games.br.unirio.joccom</app-id>
+    <unique-id>b0kzf34xmjs2</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>splashScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">High quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="player" sid="524615597580647">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vida" sid="619910895693386" type="number" />
+                <instance-variable name="danoHabilitado" sid="306957266102445" type="boolean" />
+                <instance-variable name="moral" sid="694304592597626" type="number" />
+                <instance-variable name="danoMoralHabilitado" sid="125396838679381" type="boolean" />
+                <instance-variable name="chaves" sid="321158338859610" type="number" />
+                <instance-variable name="mortes" sid="333998907172207" type="number" />
+                <instance-variable name="tempo" sid="486011098532153" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="559240778751488">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="531344794993774">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="591857966718194">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="978794709391080" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\idle\hero_idle-1.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\idle\hero_idle-2.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="walk" pingpong="1" repeatcount="1" repeatto="0" sid="858154463327709" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\walk\hero_walk-1.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\walk\hero_walk-2.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\walk\hero_walk-3.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\walk\hero_walk-4.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="922955195887156" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hero\jump\hero_jump-1.png">
+                        <image-point name="tiro" x="0.71875" y="0.6875" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0" />
+                            <point x="0.757813" y="0.484375" />
+                            <point x="0.757813" y="1" />
+                            <point x="0.496094" y="1" />
+                            <point x="0.230469" y="1" />
+                            <point x="0.230469" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="blocoSolido" sid="266483483242891">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="744824719675666">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184300782551626" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo" sid="848497991905629">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="414107299613127">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359793798428579" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\tileset\fundo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="332405612058968">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="tiro" sid="268193084489577">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="475801709066363">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="363767707100367">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842937821290060" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="particulaTiro" sid="459243418201563">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="391991865708271">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="plataforma" sid="319916103345514">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="546916767061564">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="340886536101039">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="102921088138999" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\tileset\plataformaMovel\plataformaMovel-1.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.277344" />
+                            <point x="0.8125" y="0.625" />
+                            <point x="0.5" y="1" />
+                            <point x="0.195313" y="0.621094" />
+                            <point x="0" y="0.269531" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="agua" sid="248329111194429">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="619413059058155" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\tileset\agua\agua-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\tileset\agua\agua-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\tileset\agua\agua-3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo_queimada" sid="117887241004513">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ipParaDireita_queimada" sid="602373629434774" type="boolean" />
+                <instance-variable name="vida_queimada" sid="275252376527381" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="779929095591488">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="125957397836840">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="567340315489332" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\queimada\queimada-1.png">
+                        <collision-poly>
+                            <point x="0.0898438" y="0" />
+                            <point x="0.949219" y="0" />
+                            <point x="0.949219" y="1" />
+                            <point x="0.0898438" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\queimada\queimada-2.png">
+                        <collision-poly>
+                            <point x="0.0898438" y="0" />
+                            <point x="0.949219" y="0" />
+                            <point x="0.949219" y="1" />
+                            <point x="0.0898438" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\queimada\queimada-3.png">
+                        <collision-poly>
+                            <point x="0.0898438" y="0" />
+                            <point x="0.949219" y="0" />
+                            <point x="0.949219" y="1" />
+                            <point x="0.0898438" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\queimada\queimada-4.png">
+                        <collision-poly>
+                            <point x="0.0898438" y="0" />
+                            <point x="0.949219" y="0" />
+                            <point x="0.949219" y="1" />
+                            <point x="0.0898438" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="casaInimigoObj" sid="589461397677857">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="vidaCasaInimigoObj" sid="354481227425730" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="488325998135746" speed="5">
+                    <frame duration="1" hotspotX="0.671875" hotspotY="0.859375" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\objetivo\objetivo-1.png" />
+                    <frame duration="1" hotspotX="0.671875" hotspotY="0.859375" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\objetivo\objetivo-2.png" />
+                    <frame duration="1" hotspotX="0.671875" hotspotY="0.859375" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\objetivo\objetivo-3.png" />
+                    <frame duration="1" hotspotX="0.671875" hotspotY="0.859375" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\objetivo\objetivo-4.png" />
+                    <frame duration="1" hotspotX="0.671875" hotspotY="0.859375" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\objetivo\objetivo-5.png" />
+                    <frame duration="1" hotspotX="0.671875" hotspotY="0.859375" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\objetivo\objetivo-6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="motoserra" sid="411898478296501">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ipParaDireita_motoserra" sid="246279832102429" type="boolean" />
+                <instance-variable name="vida_motossera" sid="483295205063961" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="627249841164103">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="288336719564058">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="960621409385426" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\motoserra\motoserra-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\motoserra\motoserra-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\motoserra\motoserra-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\motoserra\motoserra-4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo_correntao" sid="848792451821975">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ipParaDireita_correntao" sid="570246543663101" type="boolean" />
+                <instance-variable name="vida_correntao" sid="363034092392870" type="number" />
+                <instance-variable name="libera_item" sid="525452577965542" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="525578140672137">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="700217318222652" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\correntao\correntao-1.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.515625" y="0" />
+                            <point x="0.515625" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\inimigos\correntao\correntao-2.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.515625" y="0" />
+                            <point x="0.515625" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="colisor_patrulheiroCorrentao" sid="323389916095623">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="897951017945151" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="map" sid="511909138186180">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="809630078554991" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\tileset\map.png">
+                        <collision-poly>
+                            <point x="0.157895" y="0.2" />
+                            <point x="0.5" y="0.2" />
+                            <point x="0.864309" y="0.171875" />
+                            <point x="0.569901" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.561678" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="particulaQueimada" sid="333408384388479">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="527455595460022">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="particulaMotosserra" sid="362316597779677">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="639591126425238">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="particulaCorrentao_CasaInimigoObj" sid="493844979407629">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="507500330491510">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="function" sid="799201665121026">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="barraVida" sid="532786579915976">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540047220165763" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\vida\vida-6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="barraMoral" sid="319603340136813">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="192594716155514" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\hud\moral\moral-6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="particulaPlayer" sid="553265017904212">
+            <plugin id="Particles" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="708841003518974">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="dinDinSujo" sid="636939557588831">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="sfxDinDinSujo" sid="230108914361829" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="514361276594760">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="127274190859925">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="283369955854679">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="188693713173444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\dindinSujo\dindinSujo-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\dindinSujo\dindinSujo-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\dindinSujo\dindinSujo-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\dindinSujo\dindinSujo-4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chave" sid="480089433052089">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="734574690869242">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="675660615079195">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="291820166046821" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\ecologiaSymbol\ecologiaSymbol-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\ecologiaSymbol\ecologiaSymbol-2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hudChaves" sid="185627939120327">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="424600774132223" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\ecologiaSymbol\ecologiaSymbol-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\itens\ecologiaSymbol\ecologiaSymbol-2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hudContChaves" sid="196880367506529">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="portal" sid="594149920807504">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="close" pingpong="0" repeatcount="1" repeatto="0" sid="539640689350505" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\portal\portal-close.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="open" pingpong="0" repeatcount="1" repeatto="0" sid="197321427060081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\portal\portal-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\portal\portal-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\portal\portal-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\abreu\Desktop\jogoTeste\imagem\portal\portal-4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ampulheta" sid="669385257008524">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258415539743951" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\hud\ampulheta\ampulheta-1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\hud\ampulheta\ampulheta-2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\hud\ampulheta\ampulheta-3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\hud\ampulheta\ampulheta-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\hud\ampulheta\ampulheta-5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\hud\ampulheta\ampulheta-6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hudTempo" sid="534173105802246">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="514893571854147">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="enter" sid="140266892924944">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="103089711020668">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323650064806558" speed="0">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.513514" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\splashScreen\enter.png">
+                        <collision-poly>
+                            <point x="0.00641026" y="0.0555556" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.983974" y="0.138889" />
+                            <point x="0.990385" y="0.916667" />
+                            <point x="0.5" y="0.888889" />
+                            <point x="0.00641026" y="0.944444" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\touch.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.21875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0.5" />
+                            <point x="0.828125" y="0.828125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_gameOver_derrota" sid="801402581521324">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216266361296108" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\gameOver_derrota\gameOver_derrotaFinal_640x480.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enter_gamerOver_derrota" sid="427056755657867">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="384391186092850">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465400109625735" speed="0">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.513514" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\splashScreen\enter.png">
+                        <collision-poly>
+                            <point x="0.00641026" y="0.0555556" />
+                            <point x="0.5" y="0.166667" />
+                            <point x="0.983974" y="0.138889" />
+                            <point x="0.990385" y="0.916667" />
+                            <point x="0.5" y="0.888889" />
+                            <point x="0.00641026" y="0.944444" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515625" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\touch.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.21875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0.5" />
+                            <point x="0.828125" y="0.828125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_gameOver_vitoria" sid="768540700389375">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989100372923303" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\gameOver_vitoria\gameOver_vitoria_640x480.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enter_gamerOver_vitoria" sid="811038789832451">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="849249403966181">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510826340935409" speed="0">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.513514" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\splashScreen\enter.png">
+                        <collision-poly>
+                            <point x="0.00753769" y="0.0882353" />
+                            <point x="0.5" y="0.294118" />
+                            <point x="0.977387" y="0.264706" />
+                            <point x="0.994975" y="0.5" />
+                            <point x="0.967337" y="0.617647" />
+                            <point x="0.5" y="0.970588" />
+                            <point x="0.00502513" y="0.941176" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\touch.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.21875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0.5" />
+                            <point x="0.828125" y="0.828125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="splashScreen" sid="158741996899883">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360992397555455" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\splashScreen\splashScreenFinal_640x480.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundoNarrativa" sid="507307223903239">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846653969372147" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\narrativa\fundoNarrativa_640x480.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="heroNarrativa" sid="633114622541864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286908684425417" speed="5">
+                    <frame duration="1" hotspotX="0.502591" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\hero\hero_narrativa.png">
+                        <collision-poly>
+                            <point x="0.09375" y="0.0671642" />
+                            <point x="0.5" y="0" />
+                            <point x="0.802083" y="0.141791" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.947917" y="0.962687" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0520833" y="0.962687" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="caixaTxtNarrativa" sid="263132332636939">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584890888726634" speed="5">
+                    <frame duration="1" hotspotX="0.108" hotspotY="0.504" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtNarrativa" sid="173245603113455">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="texto" sid="407137473431239" type="string" />
+                <instance-variable name="mostrar" sid="597010041776281" type="boolean" />
+                <instance-variable name="goHowToPlay" sid="237906511072132" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="touchNarrativa" sid="840780729641303">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="enterNarrativa" sid="764014457937122">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="897757888592052">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587551473123381" speed="0">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.513514" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\splashScreen\enter.png">
+                        <collision-poly>
+                            <point x="0.00623053" y="0.0540541" />
+                            <point x="0.498442" y="0.324324" />
+                            <point x="0.959502" y="0.351351" />
+                            <point x="1" y="0.486486" />
+                            <point x="0.962617" y="0.675676" />
+                            <point x="0.498442" y="0.972973" />
+                            <point x="0.00623053" y="0.945946" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\hand_touch.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.21875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.757813" y="0.5" />
+                            <point x="0.828125" y="0.828125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="planeta_narrativa" sid="595277491452677">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="146867759251691" speed="5">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\gameOver_vitoria\planeta_narrativa.png">
+                        <collision-poly>
+                            <point x="0.227053" y="0.273256" />
+                            <point x="0.497585" y="0.0116279" />
+                            <point x="0.869565" y="0.156977" />
+                            <point x="0.975845" y="0.5" />
+                            <point x="0.985507" y="0.982558" />
+                            <point x="0.497585" y="0.936047" />
+                            <point x="0.241546" y="0.709302" />
+                            <point x="0.0434783" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img1Inconf" sid="514071629624484">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675474469093339" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\inconf\comunidade.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img2Inconf" sid="338488206577117">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392394993010362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\inconf\aniaml.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img3Inconf" sid="673606216477112">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923863867959695" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\inconf\efeitoEstufa.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="img4Inconf" sid="992657308437184">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="104980187110269" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\inconf\corrupDesmat.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo_comoJogar" sid="594226951773513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257459141725138" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\imagem\inconf\inconf_640x480.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enter_comoJogar" sid="775435359140644">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="158982263614167">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880888558536888" speed="5">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.513514" original-source="C:\Users\Vinicius&amp;Ana\Desktop\jogoTeste\ink\splashScreen\enter.png">
+                        <collision-poly>
+                            <point x="0.00623053" y="0.0540541" />
+                            <point x="0.498442" y="0.324324" />
+                            <point x="0.959502" y="0.351351" />
+                            <point x="1" y="0.486486" />
+                            <point x="0.962617" y="0.675676" />
+                            <point x="0.498442" y="0.972973" />
+                            <point x="0.00623053" y="0.945946" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shot" sid="434159767836025">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="900915846682887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\shot.png">
+                        <collision-poly>
+                            <point x="0.215" y="0.215" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.785" y="0.215" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.78" y="0.78" />
+                            <point x="0.5" y="0.975" />
+                            <point x="0.22" y="0.78" />
+                            <point x="0.025" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="up" sid="665631212168208">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433080310999183" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\left.png">
+                        <collision-poly>
+                            <point x="0.0773481" y="0.0869565" />
+                            <point x="0.5" y="0.00310559" />
+                            <point x="0.911602" y="0.0993789" />
+                            <point x="0.969613" y="0.5" />
+                            <point x="0.895028" y="0.881988" />
+                            <point x="0.5" y="0.993789" />
+                            <point x="0.104972" y="0.881988" />
+                            <point x="0.0220994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\right.png">
+                        <collision-poly>
+                            <point x="0.0773481" y="0.0869565" />
+                            <point x="0.5" y="0.00310559" />
+                            <point x="0.911602" y="0.0993789" />
+                            <point x="0.969613" y="0.5" />
+                            <point x="0.895028" y="0.881988" />
+                            <point x="0.5" y="0.993789" />
+                            <point x="0.104972" y="0.881988" />
+                            <point x="0.0220994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\up.png">
+                        <collision-poly>
+                            <point x="0.0773481" y="0.0869565" />
+                            <point x="0.5" y="0.00310559" />
+                            <point x="0.911602" y="0.0993789" />
+                            <point x="0.969613" y="0.5" />
+                            <point x="0.895028" y="0.881988" />
+                            <point x="0.5" y="0.993789" />
+                            <point x="0.104972" y="0.881988" />
+                            <point x="0.0220994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="leftBtn" sid="867796109897657">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599580342627215" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\right.png">
+                        <collision-poly>
+                            <point x="0.0773481" y="0.0869565" />
+                            <point x="0.5" y="0.00310559" />
+                            <point x="0.911602" y="0.0993789" />
+                            <point x="0.969613" y="0.5" />
+                            <point x="0.895028" y="0.881988" />
+                            <point x="0.5" y="0.993789" />
+                            <point x="0.104972" y="0.881988" />
+                            <point x="0.0220994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="rightBtn" sid="392758201350640">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281788838231503" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\right.png">
+                        <collision-poly>
+                            <point x="0.0773481" y="0.0869565" />
+                            <point x="0.5" y="0.00310559" />
+                            <point x="0.911602" y="0.0993789" />
+                            <point x="0.969613" y="0.5" />
+                            <point x="0.895028" y="0.881988" />
+                            <point x="0.5" y="0.993789" />
+                            <point x="0.104972" y="0.881988" />
+                            <point x="0.0220994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shot2" sid="102253689064049">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381822374210665" speed="5">
+                    <frame duration="1" hotspotX="0.501475" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\shot.png">
+                        <collision-poly>
+                            <point x="0.0707965" y="0.0641711" />
+                            <point x="0.498525" y="0.171123" />
+                            <point x="0.693215" y="0.278075" />
+                            <point x="0.9941" y="0.5" />
+                            <point x="0.702065" y="0.729947" />
+                            <point x="0.498525" y="0.836898" />
+                            <point x="0.0648968" y="0.941176" />
+                            <point x="0.0442478" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tailandia" sid="423058231669452">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="264922559917801" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\imagem\tailandia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="congo" sid="411339554377052">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368408266434306" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\imagem\congo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="brasil" sid="300939063673714">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="933928564229095" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Jogo Vinicius Abreu\imagem\brasil.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>fase1.xml</layout>
+        <layout>splashScreen.xml</layout>
+        <layout>gameOver_derrota.xml</layout>
+        <layout>gameOver_vitoria.xml</layout>
+        <layout>narrativa.xml</layout>
+        <layout>comoJogar.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>principal.xml</event-sheet>
+        <event-sheet>controles.xml</event-sheet>
+        <event-sheet>tiro.xml</event-sheet>
+        <event-sheet>inimigo_queimada.xml</event-sheet>
+        <event-sheet>casaInimigoObj.xml</event-sheet>
+        <event-sheet>inimigo_motoserra.xml</event-sheet>
+        <event-sheet>inimigo_correntao.xml</event-sheet>
+        <event-sheet>player.xml</event-sheet>
+        <event-sheet>dindinSujo.xml</event-sheet>
+        <event-sheet>chave.xml</event-sheet>
+        <event-sheet>ES_splashScreen.xml</event-sheet>
+        <event-sheet>ES_gameOver_derrota.xml</event-sheet>
+        <event-sheet>ES_gameOver_vitoria.xml</event-sheet>
+        <event-sheet>narrativa.xml</event-sheet>
+        <event-sheet>ES_comoJogar.xml</event-sheet>
+        <event-sheet>global.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="38" />
+        <global-instance type="function" uid="60" />
+        <global-instance type="Audio" uid="74">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="touchNarrativa" uid="85">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="jump.m4a" />
+        <file name="jump.ogg" />
+        <file name="morte_casaInimigoObj.m4a" />
+        <file name="morte_casaInimigoObj.ogg" />
+        <file name="morte_correntao.m4a" />
+        <file name="morte_correntao.ogg" />
+        <file name="morte_motoserra.m4a" />
+        <file name="morte_motoserra.ogg" />
+        <file name="morte_player.m4a" />
+        <file name="morte_player.ogg" />
+        <file name="morte_queimada.m4a" />
+        <file name="morte_queimada.ogg" />
+        <file name="tiro.m4a" />
+        <file name="tiro.ogg" />
+        <file name="dinDinSujo.m4a" />
+        <file name="dinDinSujo.ogg" />
+        <file name="chave.m4a" />
+        <file name="chave.ogg" />
+        <file name="fala1ia.ogg" />
+        <file name="fala2ia.ogg" />
+        <file name="fala3ia.ogg" />
+        <file name="fala4ia.ogg" />
+        <file name="fala5ia.ogg" />
+        <file name="fala6ia.ogg" />
+        <file name="fala1.ogg" />
+        <file name="fala2.ogg" />
+        <file name="fala3.ogg" />
+        <file name="fala4.ogg" />
+        <file name="fala5.ogg" />
+        <file name="fala6.ogg" />
+        <file name="fala7.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="gameplay.m4a" />
+        <file name="gameplay.ogg" />
+        <file name="splash_screen.m4a" />
+        <file name="splash_screen.ogg" />
+        <file name="gameOver_derrota.m4a" />
+        <file name="gameOver_derrota.ogg" />
+        <file name="gameOver_vitoria.m4a" />
+        <file name="gameOver_vitoria.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

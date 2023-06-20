@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>inimigo_correntao</name>
+    <events>
+        <include>global</include>
+        <event-block sid="199163123885315">
+            <conditions>
+                <condition id="-11" name="For Each" sid="540959664147457" type="System">
+                    <param id="0" name="Object">inimigo_correntao</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="173495988950008">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="516711729059428" type="inimigo_correntao">
+                            <param id="0" name="Instance variable">ipParaDireita_correntao</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="658574435609700" type="inimigo_correntao">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="545624363843085" type="inimigo_correntao">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="778072618423312">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="128781054440030" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="499720190115588" type="inimigo_correntao">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="877720954191685" type="inimigo_correntao">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="247502839338051">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="309758577673939" type="inimigo_correntao">
+                    <param id="0" name="Object">colisor_patrulheiroCorrentao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="735881922494988" type="inimigo_correntao">
+                    <param id="0" name="Instance variable">ipParaDireita_correntao</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="627145010207847">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="684516141637978" type="inimigo_correntao">
+                    <param id="0" name="Instance variable">vida_correntao</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="133044975406982">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="130481588627504" type="inimigo_correntao">
+                            <param id="0" name="Instance variable">libera_item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="621899937211470" type="inimigo_correntao">
+                            <param id="0" name="Object">chave</param>
+                            <param id="1" name="Layer">&quot;principal&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="250978276397269" type="inimigo_correntao">
+                            <param id="0" name="Object">particulaCorrentao_CasaInimigoObj</param>
+                            <param id="1" name="Layer">&quot;principal&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="296472250655555" type="player">
+                            <param id="0" name="Instance variable">mortes</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="125871498361526" type="Audio">
+                            <param id="0" name="Audio file">morte_correntao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="992098336952606" type="inimigo_correntao" />
+                    </actions>
+                </event-block>
+                <event-block sid="289128618565113">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="322449579907886" type="inimigo_correntao">
+                            <param id="0" name="Instance variable">libera_item</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="218034478012253" type="inimigo_correntao">
+                            <param id="0" name="Object">particulaCorrentao_CasaInimigoObj</param>
+                            <param id="1" name="Layer">&quot;principal&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="511756011787831" type="player">
+                            <param id="0" name="Instance variable">mortes</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="845922555746752" type="Audio">
+                            <param id="0" name="Audio file">morte_correntao</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="913273373178889" type="inimigo_correntao" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="746144499349142">
+            <conditions>
+                <condition id="-18" name="On created" sid="104341621197620" type="inimigo_correntao" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="636880288789700">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="624369773104732" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mobile&quot;</param>
+                        </condition>
+                        <condition id="-20" name="Is on mobile device" sid="251054456870462" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="949223187234766" type="inimigo_correntao">
+                            <param id="0" name="Instance variable">vida_correntao</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

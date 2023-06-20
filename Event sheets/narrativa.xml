@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>narrativa</name>
+    <events>
+        <variable constant="0" name="enterHabilitado" sid="631034859182309" static="0" type="number">0</variable>
+        <variable constant="0" name="proximaFala" sid="815324466782525" static="0" type="number">0</variable>
+        <event-group description="" sid="338067018045375" title="sistema">
+            <sub-events>
+                <event-block sid="374444888463147">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="895234583068153" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="991208207293395">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="519056510102291" type="System">
+                                    <param id="0" name="Variable">plataforma</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;mobile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="869397950891588" type="enterNarrativa">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="621652519066713" type="enterNarrativa">
+                                    <param id="0" name="X">590</param>
+                                    <param id="1" name="Y">222</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="839285915474706">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="963402672903603" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="769584006571680">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="943609984268804" type="txtNarrativa">
+                                    <param id="0" name="Instance variable">mostrar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="777666178674690" type="txtNarrativa">
+                                    <param id="0" name="Text">left(txtNarrativa.texto, len(txtNarrativa.Text)+1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="421689309320532">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="973815079302191" type="txtNarrativa">
+                                    <param id="0" name="Text to compare">txtNarrativa.texto</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="297663902203605" type="txtNarrativa">
+                                    <param id="0" name="Instance variable">mostrar</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="828589673573157">
+                    <conditions>
+                        <condition id="0" name="On function" sid="902298194406077" type="function">
+                            <param id="0" name="Name">&quot;conversa&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="488475384192196" type="txtNarrativa">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="854911546981969" type="txtNarrativa">
+                            <param id="0" name="Instance variable">texto</param>
+                            <param id="1" name="Value">function.Param(0)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="860899667251387" type="txtNarrativa">
+                            <param id="0" name="Instance variable">mostrar</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="767537971174984" title="fala" />
+        <event-block sid="458482051223680">
+            <conditions>
+                <condition id="0" name="On ended" sid="951491870679834" type="Audio">
+                    <param id="0" name="Tag">&quot;fala1ia&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="478714290822118">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="459946511219084" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="949884872556359" type="Audio">
+                    <param id="0" name="Audio file">fala1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala1ia&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="334034720751479" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Olá! Sou o ambientalista Endi, e vou te contar um pouco sobre como a corrupção afeta o meio ambiente...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="745607453970026" type="System">
+                    <param id="0" name="Tag">&quot;next&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="968712385276247" type="Audio">
+                    <param id="0" name="Tag">&quot;fala1ia&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="773718337862927" type="Audio">
+                    <param id="0" name="Audio file">fala2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala2_new&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="526198189795742" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Então... o desmatamento é ação do homem na atividade de remoção da vegetação nativa de uma área...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="495428333948588" type="System">
+                    <param id="0" name="Tag">&quot;next&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="197121249139398" type="Audio">
+                    <param id="0" name="Tag">&quot;fala2_new&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="738529540631955" type="Audio">
+                    <param id="0" name="Audio file">fala3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala2ia&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="793126251383617" type="enterNarrativa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Call function" sid="181414920062276" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;As consequências são problemas sociais para comunidades dependentes da floresta, perda de biodiversidade, extinção de espécies e emissão de gases do efeito estufa...&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="604878021782642" type="img1Inconf">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="275620468022565" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="710537807011110" type="img2Inconf">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="423262882027929" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="732306815321718" type="img3Inconf">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="595949130055584" type="enterNarrativa">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="351412901296619" type="System">
+                    <param id="0" name="Tag">&quot;next&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="742261063336276" type="enterNarrativa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="983195650378090" type="img1Inconf">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="139904376560033" type="img2Inconf">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="665781968005205" type="img3Inconf">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="954180088951772" type="Audio">
+                    <param id="0" name="Tag">&quot;fala2ia&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="487034725447154" type="Audio">
+                    <param id="0" name="Audio file">fala3ia</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala3ia&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="499609348357199" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Os países mais afetados são aqueles com grandes extensões de floresta tropical como Tailândia, Congo e Brasil...&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="108032444221133" type="System">
+                    <param id="0" name="Seconds">4.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="448731980498130" type="tailandia">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="415445651414850" type="System">
+                    <param id="0" name="Seconds">0.8</param>
+                </action>
+                <action id="-15" name="Set visible" sid="121663426785683" type="congo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="329435743055803" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="462638298585477" type="brasil">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="704782560180911" type="enterNarrativa">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="697206184817194" type="System">
+                    <param id="0" name="Tag">&quot;next&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="142378019186749" type="tailandia">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="282255983592016" type="congo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="904517983261445" type="brasil">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="243480770288687" type="enterNarrativa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="247869126274596" type="Audio">
+                    <param id="0" name="Tag">&quot;fala3ia&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="956862976586400" type="Audio">
+                    <param id="0" name="Audio file">fala4ia</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala4ia&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="283566717239411" type="img4Inconf">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Call function" sid="789106036613866" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;A ausência e fraqueza de instituições de controle é um grande fator de risco. Muitas das vezes esta fraqueza está ligada à CORRUPÇÃO!!!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="553446784934101" type="System">
+                    <param id="0" name="Tag">&quot;next&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="316493480279804" type="img4Inconf">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="784567345615680" type="enterNarrativa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="101507781740018" type="Audio">
+                    <param id="0" name="Tag">&quot;fala4ia&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="712678684698114" type="Audio">
+                    <param id="0" name="Audio file">fala5ia</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala5ia&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="722733610141989" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Corrupção que acontece através da extorsão de ocupantes nativos, suborno de autoridades e agentes técnicos, fraudes em políticas ambientais, dentre outros...&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="540385752603067" type="planeta_narrativa">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="930207498730821" type="System">
+                    <param id="0" name="Tag">&quot;next&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="157753152368281" type="enterNarrativa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="999365976885552" type="Audio">
+                    <param id="0" name="Tag">&quot;fala5ia&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="848887596950044" type="Audio">
+                    <param id="0" name="Audio file">fala7</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;fala6ia&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="252436693705639" type="function">
+                    <param id="0" name="Name">&quot;conversa&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Vamos embarcar juntos nesta aventura e ajudar a combater os inimigos corruptos da floresta!!!&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="845937154991343" type="enterNarrativa">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="199396716113402" type="enterNarrativa">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">1000</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="500520214904805" type="txtNarrativa">
+                    <param id="0" name="Instance variable">goHowToPlay</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="919030824383339">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="166006799821900" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="14" name="On tap" sid="276099972831527" type="touchNarrativa" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="843140283236511">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="657188966572413" type="txtNarrativa">
+                            <param id="0" name="Instance variable">goHowToPlay</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="412323813870543" type="System">
+                            <param id="0" name="Layout">&quot;comoJogar&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="928243755505026">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="835922674365581" type="enterNarrativa" />
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="804436736483881" type="System">
+                            <param id="0" name="Tag">&quot;next&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135615659554673">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="434091180705843" type="enterNarrativa" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="862083789283381" type="enterNarrativa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

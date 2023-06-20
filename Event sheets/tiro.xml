@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>tiro</name>
+    <events>
+        <event-block sid="510547651989385">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="295945175661104" type="tiro">
+                    <param id="0" name="Object">blocoSolido</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="672463252652027" type="tiro">
+                    <param id="0" name="Object">particulaTiro</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="920208172384761" type="tiro" />
+            </actions>
+        </event-block>
+        <event-block sid="729329499778688">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="206576996634457" type="tiro" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="461094219366082" type="tiro" />
+            </actions>
+        </event-block>
+        <event-block sid="150676910732934">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="538767198536690" type="tiro">
+                    <param id="0" name="Object">inimigo_queimada</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="493718117470012" type="inimigo_queimada">
+                    <param id="0" name="Instance variable">vida_queimada</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="624841251988751" type="tiro">
+                    <param id="0" name="Object">particulaTiro</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="208721662557854" type="tiro" />
+            </actions>
+        </event-block>
+        <event-block sid="215976757082763">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="809638302448511" type="tiro">
+                    <param id="0" name="Object">motoserra</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="365656916780618" type="motoserra">
+                    <param id="0" name="Instance variable">vida_motossera</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="299505279648044" type="tiro">
+                    <param id="0" name="Object">particulaTiro</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="769156639723520" type="tiro" />
+            </actions>
+        </event-block>
+        <event-block sid="104628017322600">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="534089139786048" type="tiro">
+                    <param id="0" name="Object">inimigo_correntao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="607350459644528" type="inimigo_correntao">
+                    <param id="0" name="Instance variable">vida_correntao</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="713959019407981" type="tiro">
+                    <param id="0" name="Object">particulaTiro</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="948613061625517" type="tiro" />
+            </actions>
+        </event-block>
+        <event-block sid="924179037496498">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="521873723041521" type="tiro">
+                    <param id="0" name="Object">casaInimigoObj</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="752641069895517" type="casaInimigoObj">
+                    <param id="0" name="Instance variable">vidaCasaInimigoObj</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="922058749733765" type="tiro">
+                    <param id="0" name="Object">particulaTiro</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="301267555964437" type="tiro" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

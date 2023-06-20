@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_splashScreen</name>
+    <events>
+        <include>global</include>
+        <event-block any="1" sid="348938319670720">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="556270072992614" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="940849651250954" type="System">
+                    <param id="0" name="Variable">plataforma</param>
+                    <param id="1" name="Value">&quot;desktop&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="985405797068410" type="System">
+                    <param id="0" name="Layout">narrativa</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="709097876824904">
+            <conditions>
+                <condition id="14" name="On tap" sid="916915742244627" type="touchNarrativa" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="646020129533796" type="System">
+                    <param id="0" name="Variable">plataforma</param>
+                    <param id="1" name="Value">&quot;mobile&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="381706617266490" type="System">
+                    <param id="0" name="Layout">narrativa</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="315010119450319">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="380812999160313" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="734343656746658" type="Audio">
+                    <param id="0" name="Audio file">splash_screen</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;splash_screen&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="335349807637941" type="enter">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">1000</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="430264507252265">
+                    <conditions>
+                        <condition id="-20" name="Is on mobile device" sid="298261090520890" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="878911322469761" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Value">&quot;mobile&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="202626055367331" type="enter">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897449380116354">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="434948536623027" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="659860235650124" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Value">&quot;desktop&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="660686481563215" type="enter">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="524319848463077">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="521437959988191" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="664551986568619" type="Audio">
+                    <param id="0" name="Tag">&quot;splash_screen&quot;</param>
+                    <param id="1" name="dB">-15</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>principal</name>
+    <events>
+        <include>global</include>
+        <include>chave</include>
+        <include>dindinSujo</include>
+        <include>player</include>
+        <include>inimigo_correntao</include>
+        <include>inimigo_motoserra</include>
+        <include>casaInimigoObj</include>
+        <include>inimigo_queimada</include>
+        <include>tiro</include>
+        <include>controles</include>
+        <comment>musica</comment>
+        <event-block sid="273253275987290">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="206099466305941" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="607110854214011" type="Audio">
+                    <param id="0" name="Audio file">gameplay</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;gameplay&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="751671963691243">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="414852995209354" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;desktop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="928419873108149" type="up">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="603444259649037" type="leftBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="908026935247052" type="rightBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="699292916312841" type="shot2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="610491373263916" type="up">
+                            <param id="0" name="X">-500</param>
+                            <param id="1" name="Y">-500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="918766485185599" type="leftBtn">
+                            <param id="0" name="X">-1000</param>
+                            <param id="1" name="Y">-1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="720344771179225" type="rightBtn">
+                            <param id="0" name="X">-1000</param>
+                            <param id="1" name="Y">-1000</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="186259937668751" type="shot2">
+                            <param id="0" name="X">-1000</param>
+                            <param id="1" name="Y">-1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="825835972120798">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="428544052235332" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mobile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="820980984794120" type="up">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="578750913707832" type="leftBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="180896694720577" type="rightBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="587250453023245" type="shot2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="991993561010628">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="281356794913280" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="487817506125798" type="Audio">
+                    <param id="0" name="Tag">&quot;gameplay&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>hud</comment>
+        <event-block sid="737368918144169">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="635797341362205" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="746477730969241" type="barraVida">
+                    <param id="0" name="Frame number">player.vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="384643099076811">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="585520371817500" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="721853998865139" type="barraMoral">
+                    <param id="0" name="Frame number">player.moral</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="801450539925012">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="240471008819789" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="458108610055334" type="hudContChaves">
+                    <param id="0" name="Text">player.chaves&amp;&quot;/6&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

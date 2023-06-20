@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ES_gameOver_derrota</name>
+    <events>
+        <include>global</include>
+        <event-block sid="244060625146350">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="396603116234815" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="506023616034067" type="Audio">
+                    <param id="0" name="Audio file">gameOver_derrota</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;gameOver_derrota&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="237531717212536" type="enter_gamerOver_derrota">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">1000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="469736878676844">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="413921645036377" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="170307588250105">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="653400625138415" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mobile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="773828043627720" type="enter_gamerOver_derrota">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="114391334312830">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="341734817587375" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="14" name="On tap" sid="359832757388839" type="touchNarrativa" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="342157070180687" type="System">
+                    <param id="0" name="Layout">splashScreen</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

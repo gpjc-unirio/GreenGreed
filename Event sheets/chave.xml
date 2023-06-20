@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>chave</name>
+    <events>
+        <event-block sid="976922420066104">
+            <conditions>
+                <condition id="-18" name="On created" sid="416464865976937" type="chave" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="884574670832624" type="chave">
+                    <param id="0" name="Vector Y">-500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="970081302312134">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="706041536253437" type="player">
+                    <param id="0" name="Instance variable">chaves</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="623513371825397" type="portal">
+                    <param id="0" name="Animation">&quot;open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="937323371827082">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="373216281984375" type="player">
+                            <param id="0" name="Object">portal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="583049353746160" type="System">
+                            <param id="0" name="Layout">gameOver_vitoria</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="783409646900610">
+            <conditions>
+                <condition id="-22" name="Else" sid="735083106687690" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="703612460901921" type="portal">
+                    <param id="0" name="Animation">&quot;off&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

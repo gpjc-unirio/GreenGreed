@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>casaInimigoObj</name>
+    <events>
+        <include>global</include>
+        <event-block sid="194418309375443">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="239247170857870" type="casaInimigoObj" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="528196554819199">
+                    <conditions>
+                        <condition id="-20" inverted="1" name="Is on mobile device" sid="925604045797960" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="963633473516063">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="214554375155442" type="System">
+                                    <param id="0" name="Interval (seconds)">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="105764244817287" type="casaInimigoObj">
+                                    <param id="0" name="Object">inimigo_queimada</param>
+                                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="813816771278310">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="888167715960686" type="System">
+                                    <param id="0" name="Interval (seconds)">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="717350065164810" type="casaInimigoObj">
+                                    <param id="0" name="Object">motoserra</param>
+                                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="213023101037823">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="489639943178981" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="393049056485137">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="166191602908203" type="System">
+                                    <param id="0" name="Interval (seconds)">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="760948530348775" type="casaInimigoObj">
+                                    <param id="0" name="Object">inimigo_queimada</param>
+                                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="790812866281042">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="266284493451143" type="System">
+                                    <param id="0" name="Interval (seconds)">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="626040720139643" type="casaInimigoObj">
+                                    <param id="0" name="Object">motoserra</param>
+                                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="940650823593155">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="913707451201768" type="casaInimigoObj">
+                    <param id="0" name="Instance variable">vidaCasaInimigoObj</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="247265879150745" type="casaInimigoObj">
+                    <param id="0" name="Object">particulaCorrentao_CasaInimigoObj</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="825056282750234" type="casaInimigoObj">
+                    <param id="0" name="Object">chave</param>
+                    <param id="1" name="Layer">&quot;principal&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="377501083132240" type="player">
+                    <param id="0" name="Instance variable">mortes</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="746625557829021" type="Audio">
+                    <param id="0" name="Audio file">morte_casaInimigoObj</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="349527366067027" type="casaInimigoObj" />
+            </actions>
+        </event-block>
+        <event-block sid="416321251809238">
+            <conditions>
+                <condition id="-18" name="On created" sid="761705271519314" type="casaInimigoObj" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="151338823162658">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="472084276699372" type="System">
+                            <param id="0" name="Variable">plataforma</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mobile&quot;</param>
+                        </condition>
+                        <condition id="-20" name="Is on mobile device" sid="579529519301020" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="619214655002825" type="casaInimigoObj">
+                            <param id="0" name="Instance variable">vidaCasaInimigoObj</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
